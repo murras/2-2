@@ -1,39 +1,39 @@
-// B411063 2ÇĞ³â ±èÇü¼® Kim Hyeong Seok
+// B411063 2í•™ë…„ ê¹€í˜•ì„ Kim Hyeong Seok
 #ifndef POSTFIX_H
 #define POSTFIX_H
 
-#define ID 257 // º¯¼ö ÀÌ¸§ÀÌ °®´Â Å¸ÀÔ
-#define NUM 258 // 25³ª 35.7 °°Àº ¼ıÀÚ°¡ °®´Â Å¸ÀÔ
-#define EQ 259 // == ÀÌ °®´Â Å¸ÀÔ
-#define NE 260 // !=ÀÌ °®´Â Å¸ÀÔ
-#define GE 261 // >=ÀÌ °®´Â Å¸ÀÔ
-#define LE 262 // <=ÀÌ °®´Â Å¸ÀÔ
-#define AND 263 // && °¡ °®´Â Å¸ÀÔ
-#define OR 264 // ||ÀÌ °®´Â Å¸ÀÔ
-#define UMINUS 265 // -u(unary -)°¡ °®´Â Å¸ÀÔ
-//  1ÀÚ (¿¬»êÀÚ) ÅäÅ«ÀÇ ÅäÅ«Å¸ÀÔ = ±× ¹®ÀÚÀÇ ¾Æ½ºÅ°ÄÚµå
-#define MAXLEN 80 
-#include <cstring> // strlen »ç¿ë
+#define ID 257 // ë³€ìˆ˜ ì´ë¦„ì´ ê°–ëŠ” íƒ€ì…
+#define NUM 258 // 25ë‚˜ 35.7 ê°™ì€ ìˆ«ìê°€ ê°–ëŠ” íƒ€ì…
+#define EQ 259 // == ì´ ê°–ëŠ” íƒ€ì…
+#define NE 260 // !=ì´ ê°–ëŠ” íƒ€ì…
+#define GE 261 // >=ì´ ê°–ëŠ” íƒ€ì…
+#define LE 262 // <=ì´ ê°–ëŠ” íƒ€ì…
+#define AND 263 // && ê°€ ê°–ëŠ” íƒ€ì…
+#define OR 264 // ||ì´ ê°–ëŠ” íƒ€ì…
+#define UMINUS 265 // -u(unary -)ê°€ ê°–ëŠ” íƒ€ì…
+//  1ì (ì—°ì‚°ì) í† í°ì˜ í† í°íƒ€ì… = ê·¸ ë¬¸ìì˜ ì•„ìŠ¤í‚¤ì½”ë“œ
+#define MAXLEN 80
+#include <cstring> // strlen ì‚¬ìš©
 
 struct Expression {
 	Expression(char* linebuf, bool inf = false) : buf(linebuf), pos(0), len(strlen(buf)), infix(inf) {}
 	char * buf;
-	int pos; // Expression ³»ÀÇ ÇöÀçÀÇ À§Ä¡ 0~len-1 »çÀÌÀÇ ¼ö
-	int len; // ExpressionÀÇ buf°¡ °¡¸®Å°´Â ¹®ÀÚ¿­ÀÇ ±æÀÌ
-	bool infix; // true for infix expression ( -Ã³¸® À§ÇØ ÇÊ¿ä)
+	int pos; // Expression ë‚´ì˜ í˜„ì¬ì˜ ìœ„ì¹˜ 0~len-1 ì‚¬ì´ì˜ ìˆ˜
+	int len; // Expressionì˜ bufê°€ ê°€ë¦¬í‚¤ëŠ” ë¬¸ìì—´ì˜ ê¸¸ì´
+	bool infix; // true for infix expression ( -ì²˜ë¦¬ ìœ„í•´ í•„ìš”)
 };
 
 struct Token {
 	bool operator==(char);
 	bool operator!=(char);
 	Token();
-	Token(char); // 1ÀÚ ÅäÅ«
-	Token(char, char, int); // 2ÀÚ ÅäÅ«
-	Token(char*, int, int);// operand¿Í ±×±æÀÌ ¹× Å¸ÀÔ(default ´Â ID)
+	Token(char); // 1ì í† í°
+	Token(char, char, int); // 2ì í† í°
+	Token(char*, int, int);// operandì™€ ê·¸ê¸¸ì´ ë° íƒ€ì…(default ëŠ” ID)
 
-	bool IsOperand(); // ÅäÅ« Å¸ÀÔÀÌ ID NUM ÀÌ¸é true
+	bool IsOperand(); // í† í° íƒ€ì…ì´ ID NUM ì´ë©´ true
 	int type;
-	char *str;
+    char *str;
 	int len;
 	float val;
 };

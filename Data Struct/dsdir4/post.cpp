@@ -1,4 +1,4 @@
-// B411063 2ÇĞ³â ±èÇü¼® Kim Hyeong Seok
+// B411063 2í•™ë…„ ê¹€í˜•ì„ Kim Hyeong Seok
 #include <iostream>
 #include <stack>
 #include "post.h"
@@ -136,7 +136,7 @@ Token NextToken(Expression& e) {
 	Token tok;
 	SkipBlanks(e);
 	if (e.pos == e.len)
-		tok = Token('#'); // ÅäÅ« ¾øÀ½À» ¾Ë¸®´Â ÅäÅ«
+		tok = Token('#'); // í† í° ì—†ìŒì„ ì•Œë¦¬ëŠ” í† í°
 	else if (GetID(e, tok) || GetNUM(e, tok)) {} // do nothing
 	else if (TwoCharOp(e, tok)) {} // do nothing
 	else if (OneCharOp(e, tok)) {
@@ -163,7 +163,6 @@ int icp(Token& t) {
 	else if (ty == OR) return 7;
 	else if (ty == '#') return 10;
 }
-// t.typeÀÌ '(' ÀÌ¸é 0 UMINUS³ª ! ÀÌ¸é 1 * /
 
 int isp(Token& t) {
 	int ty = t.type;
@@ -173,7 +172,7 @@ int isp(Token& t) {
 
 void Postfix(Expression e) {
 	stack<Token> sta;
-	sta.push('#');
+	sta.push(Token('#'));
 	for (Token x = NextToken(e); x != '#'; x = NextToken(e)) {
 		if (x.IsOperand())
 			cout << x;
@@ -183,8 +182,11 @@ void Postfix(Expression e) {
 			sta.pop();
 		}
 		else {
-			for (; isp(sta.top()) <= icp(x); sta.pop())
-				cout << sta.top();
+			for (; isp(sta.top()) <= icp(x); sta.pop()) {
+				if (x == '=')//||sta.top() == '=')
+					break;
+                cout << sta.top();
+			}
 			sta.push(x);
 		}
 	}
@@ -193,5 +195,7 @@ void Postfix(Expression e) {
 		cout << sta.top();
 		sta.pop();
 	}
+    sta.pop();
 	cout << endl;
 }
+

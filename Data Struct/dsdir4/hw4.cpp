@@ -1,4 +1,4 @@
-// B411063 2ÇĞ³â ±èÇü¼® Kim Hyeong Seok
+// B411063 2í•™ë…„ ê¹€í˜•ì„ Kim Hyeong Seok
 #include <iostream>
 #include "post.h"
 using namespace std;
@@ -9,7 +9,7 @@ int main() {
 	char linebuf[MAXLEN];
 	while (cin.getline(linebuf, MAXLEN)) {
 		Expression e(linebuf, true);
-		// ÁÙ ¹öÆÛ ÀÌ¿ë ExpressionÀ» ¸¸µë true´Â infix½ÄÀ» ÀÇ¹Ì
+		// ì¤„ ë²„í¼ ì´ìš© Expressionì„ ë§Œë“¬ trueëŠ” infixì‹ì„ ì˜ë¯¸
 		try { Postfix(e); }
 		catch (char const *msg) {
 			cerr << "Exception: " << msg << endl;

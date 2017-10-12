@@ -161,7 +161,8 @@ int icp(Token& t) {
 	else if (ty == EQ || ty == NE) return 5;
 	else if (ty == AND) return 6;
 	else if (ty == OR) return 7;
-	else if (ty == '#') return 10;
+    else if (ty == '=') return 8;
+    else if (ty == '#') return 10;
 }
 
 int isp(Token& t) {
@@ -183,7 +184,7 @@ void Postfix(Expression e) {
 		}
 		else {
 			for (; isp(sta.top()) <= icp(x); sta.pop()) {
-				if (x == '=')//||sta.top() == '=')
+				if (x == '='&&sta.top() == '=')
 					break;
                 cout << sta.top();
 			}

@@ -1,4 +1,3 @@
-//B411063 2학년 김형석
 #include <iostream>
 #include <stack>
 #include <map>

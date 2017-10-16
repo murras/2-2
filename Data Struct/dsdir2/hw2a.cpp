@@ -1,4 +1,3 @@
-// B411063 김형석2학년
 #include <iostream>
 using namespace std;
 #include "polya.h"

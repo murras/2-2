@@ -1,4 +1,3 @@
-// 2학년 김형석 B411063
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 using namespace std;

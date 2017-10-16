@@ -1,4 +1,3 @@
-// B411063 2학년 김형석
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 #include <iostream>

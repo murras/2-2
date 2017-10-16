@@ -1,4 +1,3 @@
-// B411063 2학년 김형석 Kim Hyeong Seok
 #ifndef POSTFIX_H
 #define POSTFIX_H
 

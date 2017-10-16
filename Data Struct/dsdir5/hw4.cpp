@@ -1,4 +1,3 @@
-// B411063 2학년 김형석 Kim Hyeong Seok
 #include <iostream>
 #include "post.h"
 using namespace std;

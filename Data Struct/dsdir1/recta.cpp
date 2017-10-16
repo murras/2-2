@@ -1,4 +1,3 @@
-// 김형석 2학년 B411063 
 #include <iostream>
 #include "recta.h"
 using namespace std;

@@ -1,4 +1,3 @@
-// 2학년 김형석  B411063
 #include <iostream>
 #include "rectb.h"
 using namespace std;

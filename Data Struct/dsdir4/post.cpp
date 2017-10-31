@@ -185,7 +185,7 @@ void Postfix(Expression e) {
 			for (; isp(sta.top()) <= icp(x); sta.pop()) {
 				if (x == '='&&sta.top() == '=')
 					break;
-                cout << sta.top();
+      	cout << sta.top();
 			}
 			sta.push(x);
 		}
@@ -198,4 +198,3 @@ void Postfix(Expression e) {
     sta.pop();
 	cout << endl;
 }
-

@@ -1,6 +1,7 @@
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 #include <iostream>
+using namespace std;
 struct Term {
 	float coef;
 	int exp;

@@ -56,7 +56,9 @@ int main(void) {
 	}
 
 	//system("pause");
-	for (int i = 0; i < n; i++) // 동적할당 받은거 반환하기
+	for (i = 0; i < n; i++) // 동적할당 받은거 반환하기
 		free(t[i]);
 	free(t);
+
+	return 0;
 }

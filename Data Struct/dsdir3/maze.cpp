@@ -87,13 +87,9 @@ void Path(const int m, const int p) {
 			}
 			else d++;
 		}
-
-		
 	}
-
 	cout << "no path in maze" << endl;
 }
-
 void getdata(istream& is, int& m, int& p) {
 	is >> m >> p;
 	for (int i = 0; i < m + 2; i++) {

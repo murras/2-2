@@ -14,4 +14,3 @@ private:
 	int xLow, yLow, height, width;
 };	
 #endif
-

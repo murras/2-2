@@ -86,28 +86,21 @@ void Path(const int m, const int p) {
 				d = N;
 			}
 			else d++;
-
-			
-
 		}
-
-		
 	}
-
 	cout << "no path in maze" << endl;
 }
-
-	void getdata(istream& is, int& m, int& p) {
-		is >> m >> p;
-		for (int i = 0; i < m + 2; i++) {
-			maze[i][0] = 1;
-			maze[i][p + 1] = 1;
-		}
-		for (int j = 1; j <= p; j++) {
-			maze[0][j] = 1;
-			maze[m + 1][j] = 1;
-		}
-		for (int i = 1; i <= m; i++)
-			for (int j = 1; j <= p; j++)
-				is >> maze[i][j];
+void getdata(istream& is, int& m, int& p) {
+	is >> m >> p;
+	for (int i = 0; i < m + 2; i++) {
+		maze[i][0] = 1;
+		maze[i][p + 1] = 1;
 	}
+	for (int j = 1; j <= p; j++) {
+		maze[0][j] = 1;
+		maze[m + 1][j] = 1;
+	}
+	for (int i = 1; i <= m; i++)
+		for (int j = 1; j <= p; j++)
+			is >> maze[i][j];
+}

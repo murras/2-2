@@ -1,5 +1,6 @@
+//B411063 김형석 2학년
 #include "bt.h"
-
+#include <string>
 int main(){
     BST<string, double> bst;
     string str;
@@ -17,5 +18,5 @@ int main(){
     bst.Postorder();
     cout << endl << "Levelorder traversal: ";
     bst.Levelorder();
-    cotu << endl;
+    cout << endl;
 }

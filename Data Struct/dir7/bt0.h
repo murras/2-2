@@ -1,3 +1,4 @@
+//B411063 2학년 김형석
 #ifndef BT0_H
 #define BT0_H
 #include <iostream>
@@ -6,10 +7,10 @@ using namespace std;
 
 template <class T>
 struct Node {
-	Node(T d, Note<T> *left = 0, Node<T> *right = 0) :data(d), leftChild(left), rightChild(right) { }
+	Node(T d, Node<T> *left = 0, Node<T> *right = 0) :data(d), leftChild(left), rightChild(right) { }
 	Node<T> *leftChild;
 	T data;
-	Node<t> *rightChild;
+	Node<T> *rightChild;
 };
 
 template <class T>
@@ -47,7 +48,7 @@ void Tree<T>::Insert(Node<T> *&ptr, T &value) {
 		cout << endl << "Duplicate value " << " ignored\n";
 }
 
-template <class T>
+template <class T> // 전위 순회 VLR
 void Tree<T>::Preorder(Node<T> *currentNode) {
 	if (currentNode) {
 		Visit(currentNode);
@@ -56,25 +57,39 @@ void Tree<T>::Preorder(Node<T> *currentNode) {
 	}
 }
 
-template <class T>
+template <class T> // 중위순회 LVR
 void Tree<T>::Inorder(Node<T> *currentNode) {
 	if (currentNode) {
-		Visit(currentNode);
 		Inorder(currentNode->leftChild);
+		Visit(currentNode);
 		Inorder(currentNode->rightChild);
 	}
 }
 
-template <class T>
+template <class T> // 후위순회 LRV
 void Tree<T>::Postorder(Node<T> *currentNode) {
 	if (currentNode) {
-		Visit(currentNode);
 		Postorder(currentNode->leftChild);
 		Postorder(currentNode->rightChild);
+		Visit(currentNode);
 	}
 }
 
 template <class T>
-void Tree<T>::Levelorder
+void Tree<T>::Levelorder() {
+	queue<Node<T>*> q;
+	Node<T> *currentNode = root;
+	while (currentNode) {
+		Visit(currentNode);
+		if (currentNode->leftChild)
+			q.push(currentNode->leftChild);
+		if (currentNode->rightChild)
+			q.push(currentNode->rightChild);
+		if (q.empty())
+			return;
+		currentNode = q.front();
+		q.pop();
+	}
+}
 
 #endif

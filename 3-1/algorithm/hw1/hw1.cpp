@@ -7,8 +7,8 @@ int cnt[1001];      // 각 레벨의 노드 갯수
 int main() {
     int n;
     ifstream ifs("input.txt");
-    ifs >> n;      // 테스트 케이스의 개수 입력 받기
-    while (n--) {  // n번 반복
+    ifs >> n;                              // 테스트 케이스의 개수 입력 받기
+    while (n--) {                          // n번 반복
         for (int i = 0; i <= 1001; i++) {  // 0으로 초기화
             tree[i][0] = 0;
             tree[i][1] = 0;

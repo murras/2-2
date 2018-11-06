@@ -10,7 +10,7 @@ public:
 	Circle(int radius, string name) {
 		this->radius = radius;
 		this->name = name;
-	}
+	} 
 	double getArea() {
 		return 3.14*radius*radius;
 	}
@@ -25,19 +25,19 @@ void vect_circle() {
 	int r;
 	string s;
 	vector<Circle*>::iterator iter;
-	cout << "¿øÀ» »ðÀÔÇÏ°í »èÁ¦ÇÏ´Â ÇÁ·Î±×·¥ÀÔ´Ï´Ù." << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½Ô´Ï´ï¿½." << endl;
 	while (true)
 	{	
 		
-		cout << "»ðÀÔ:1, »èÁ¦:2, ¸ðµÎ º¸±â:3, Á¾·á:4 >> ";
+		cout << "ï¿½ï¿½ï¿½ï¿½:1, ï¿½ï¿½ï¿½ï¿½:2, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½:3, ï¿½ï¿½ï¿½ï¿½:4 >> ";
 		cin >> n;
 		if (n == 1) {
-			cout << "»ý¼ºÇÏ°íÀÚ ÇÏ´Â ¿øÀÇ ¹ÝÁö¸§°ú ÀÌ¸§Àº >> ";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ >> ";
 			cin >> r >> s;
 			vec.push_back(new Circle(r, s));
 		}
 		else if (n == 2) {
-			cout << "»èÁ¦ÇÏ°íÀÚ ÇÏ´Â ¿øÀÇ ÀÌ¸§Àº >> ";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ >> ";
 			cin >> s;
 			iter = vec.begin();
 			while (iter != vec.end()) {

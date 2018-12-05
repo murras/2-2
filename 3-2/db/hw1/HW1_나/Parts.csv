@@ -1,0 +1,9 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 화요일-11월-13-2018   
+--------------------------------------------------------
+REM INSERTING into HONGIK.PARTS
+SET DEFINE OFF;
+Insert into HONGIK.PARTS (PID,PNAME,COLOR) values (100,'p1','red');
+Insert into HONGIK.PARTS (PID,PNAME,COLOR) values (101,'p2','red');
+Insert into HONGIK.PARTS (PID,PNAME,COLOR) values (200,'p3','green');
+Insert into HONGIK.PARTS (PID,PNAME,COLOR) values (201,'p4','green');

@@ -167,3 +167,9 @@ FROM E.EID = D.MANAGERID
 GROUP BY E.EID, E.ENAME
 HAVING EVERY (D.BUDGET > 1000000)
 AND ANY (BUDGET<5000000)
+
+
+-- 145 page 정독
+-- 5장 정독
+-- 1번 8번 문제 주의깊게 보자 !
+```

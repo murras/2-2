@@ -1,0 +1,16 @@
+mount DISK1.img
+cd os
+ls
+touch x1
+ls
+rm x1
+ls
+rm os_grade.txt
+ls
+cd ..
+rm os
+rm x2
+ls
+fsck
+exit
+

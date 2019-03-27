@@ -1,0 +1,16 @@
+mount DISK1.img
+mv os os2015
+ls
+mv xx os2016
+cd os2015
+ls
+mv hw3_submit os_grade.txt
+mv os_grade.txt osg
+ls
+mv hw3_submit os_grade.txt
+ls
+cd os_grade.txt
+ls
+fsck
+exit
+

@@ -1,0 +1,12 @@
+mount DISK1.img
+touch Test
+ls
+cd os
+touch x1
+ls
+touch x1
+cd ..
+touch os
+fsck
+exit
+

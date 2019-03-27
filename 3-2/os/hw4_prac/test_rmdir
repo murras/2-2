@@ -1,0 +1,19 @@
+mount DISK1.img
+mkdir test
+cd test
+rmdir .
+cd ..
+rmdir test
+rmdir .
+rmdir ..
+rmdir os
+cd os
+rmdir hw3_submit
+rmdir os_grade.txt
+ls
+cd ..
+ls
+rmdir congratulation_on_successful_ls
+ls
+fsck
+exit

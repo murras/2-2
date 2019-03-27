@@ -1,0 +1,20 @@
+mount DISK1.img
+ls
+cd os
+ls
+cd ..
+ls os
+ls ERR
+cd os
+ls os_grade.txt
+cd os_grade.txt
+ls ..
+cd ERR
+ls hw3_submit
+cd hw3_submit
+ls
+cd
+ls
+fsck
+exit
+

@@ -1,0 +1,1 @@
+cp ~ksilab/hw4/* .

@@ -1,0 +1,10 @@
+mount DISK1.img
+cpin ok1 2sfs
+ls
+dump
+cpout ok1 ok12sfs
+cpout ok2 ok22sfs
+cpout ok1 ok12sfs
+fsck
+exit
+
